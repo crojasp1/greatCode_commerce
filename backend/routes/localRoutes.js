@@ -1,7 +1,8 @@
-const express = require('express');
-const { getLocales } = require('../controllers/localController');
+import express from 'express';
+import { getLocales } from '../controllers/localController.js';
 const router = express.Router();
 
 router.get('/locales', getLocales);
 
-module.exports = router;
+export default router;
+

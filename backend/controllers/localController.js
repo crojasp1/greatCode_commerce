@@ -1,4 +1,4 @@
-const Local = require('../models/local');
+import Local from '../models/local.js';
 
 // Obtener todos los locales
 async function getLocales(req, res) {
@@ -10,6 +10,6 @@ async function getLocales(req, res) {
   }
 }
 
-module.exports = {
+export {
   getLocales,
 };
