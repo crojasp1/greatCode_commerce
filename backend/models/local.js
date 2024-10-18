@@ -1,5 +1,5 @@
-const { DataTypes } = require('sequelize');
-const sequelize = require('../config/database');
+import { DataTypes } from 'sequelize';
+import sequelize from '../config/database.js';
 
 // Definir el modelo para la tabla Local
 const Local = sequelize.define('Local', {
@@ -8,28 +8,36 @@ const Local = sequelize.define('Local', {
     primaryKey: true,
     autoIncrement: true,
   },
-  nombre: {
+  name: {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  direccion: {
+  link: {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  barrio: {
+  image: {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  precio_arrendamiento: {
+  price: {
     type: DataTypes.FLOAT,
     allowNull: false,
   },
-  descripcion: {
+  size: {
     type: DataTypes.STRING,
     allowNull: false,
   },
+  location: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+  agency: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  }
 }, {
   timestamps: false,
 });
 
-module.exports = Local;
+export default Local;

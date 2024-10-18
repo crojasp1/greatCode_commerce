@@ -1,7 +1,7 @@
-const express = require('express');
-const sequelize = require('./config/database');
-const localRoutes = require('./routes/localRoutes');
-const saveScrapedDataToDB = require('./scrapers/scraper');
+import express from 'express';
+import sequelize from './config/database.js';
+import localRoutes from './routes/localRoutes.js';
+import saveScrapedDataToDB from './scrapers/scraper.js';
 
 const app = express();
 app.use(express.json());
